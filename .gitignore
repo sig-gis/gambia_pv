@@ -1,0 +1,14 @@
+*.pt
+*.ckpt
+*.tif
+*.tiff
+
+checkpoints
+data
+logs
+
+.vscode
+__pycache__
+*.pyc
+.env/
+.python-version

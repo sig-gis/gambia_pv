@@ -1,0 +1,7 @@
+ 
+dbf_percentage_thresh: 0.25
+dbf: true
+dbf_list: 
+    [["/home/ceoas/truongmy/emapr/gambia_pv/data/pv_polygons/pv_polygons.dbf"],
+    ["/home/ceoas/truongmy/emapr/gambia_pv/data/background/background.dbf"]]
+ 
