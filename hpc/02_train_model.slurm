@@ -1,6 +1,6 @@
 #!/bin/bash -l
 #SBATCH --nodes=1
-#SBATCH --mem=256G
+#SBATCH --mem=512G
 #SBATCH --cpus-per-task=32
 #SBATCH --partition=ewg
 #SBATCH --output=/home/ceoas/truongmy/emapr/gambia_pv/logs/02_train_model.log

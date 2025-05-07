@@ -52,7 +52,7 @@ if __name__ == "__main__":
     model = UNet(in_channels=6, out_channels=1).to(device)
     best_ckpt_path = find_lowest_loss(os.path.join(ckpt_path, f"{experiment_name}/*.pt"))
 
-    ckpt = torch.load(ckpt_path, map_location=device)
+    ckpt = torch.load(best_ckpt_path, map_location=device)
     model.load_state_dict(ckpt)
     model.eval()
     
