@@ -36,13 +36,13 @@ Data is storage in public cloud buckets. The high resolution imagery is stored a
 
 ```console
 # download raw data
-wget -P ./data https://storage.googleapis.com/pv_mapping/pleides_RGBNED.tif 
-wget -P ./data https://storage.googleapis.com/pv_mapping/background.geojson
-wget -P ./data https://storage.googleapis.com/pv_mapping/pv_polygons.geojson
-wget -P ./data https://storage.googleapis.com/pv_mapping/roads.geojson
+gcloud storage cp -r gs://pv_mapping/pleides_RGBNED.tif  ./data
+gcloud storage cp -r gs://pv_mapping/background.geojson ./data
+gcloud storage cp -r gs://pv_mapping/pv_polygons.geojson ./data
+gcloud storage cp -r gs://pv_mapping/roads.geojson ./data
 
 # alternatively download precomputed data (~2GB)
-wget -P ./data https://storage.googleapis.com/pv_mapping/precomputed
+gcloud storage cp -r gs://pv_mapping/precomputed ./data
 ```
 
 ### run workflow
