@@ -14,10 +14,10 @@ from torch.utils.data import Dataset
 
 
 class PVDataset(Dataset):
-    def __init__(self, data_path, stats_file, split="train_samples", image_size=224):
+    def __init__(self, data_path, stats_file, split="train_samples", image_size=224, key="bg"):
         self.split = split
-        self.image_paths = sorted(glob.glob(os.path.join(data_path, split, "images", "*.tif")))
-        self.mask_paths = sorted(glob.glob(os.path.join(data_path, split, "masks", "*.tif")))
+        self.image_paths = sorted(glob.glob(os.path.join(data_path, split, "images", f"*{key}.tif")))
+        self.mask_paths = sorted(glob.glob(os.path.join(data_path, split, "masks", f"*{key}.tif")))
         assert len(self.image_paths) == len(self.mask_paths), "Mismatch between images and masks"
         self.image_size = image_size
 
