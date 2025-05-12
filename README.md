@@ -35,10 +35,14 @@ export EXPERIMENT_NAME="name_of_model_iteration_experiment"
 Data is storage in public cloud buckets. The high resolution imagery is stored as a single tif and is ~129.3GB. 6 Bands are provided by the Pleides NEO team: RGB, Blue, NIR, and Deep Blue. See links below.
 
 ```console
+# download raw data
 wget -P ./data https://storage.googleapis.com/pv_mapping/pleides_RGBNED.tif 
 wget -P ./data https://storage.googleapis.com/pv_mapping/background.geojson
 wget -P ./data https://storage.googleapis.com/pv_mapping/pv_polygons.geojson
 wget -P ./data https://storage.googleapis.com/pv_mapping/roads.geojson
+
+# alternatively download precomputed data (~2GB)
+wget -P ./data https://storage.googleapis.com/pv_mapping/precomputed
 ```
 
 ### run workflow
